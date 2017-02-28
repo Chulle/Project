@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<header lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <!-- Bootdstrap Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+    <!-- Bootstrap Latest compiled JavaScript -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS för navigationsmenyn -->
+
+    <link rel="stylesheet" type="text/css" href="navcss.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
+
+
+
+
+
+    <h1>Lärare</h1>
+
+</head>
+
+<nav id="menu">
+    <label for="tm" id="toggle-menu">Navigation <span class="drop-icon">▾</span></label>
+    <input type="checkbox" id="tm">
+
+    <ul class="main-menu clearfix">
+
+
+        <li><a href="#">Lärare
+            <span class="drop-icon">▾</span>
+            <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+        </a>
+            <input type="checkbox" id="sm4">
+            <ul class="sub-menu">
+                <li><a href="#">Start</a></li>
+
+            </ul>
+        <li><a href="#">Prov
+            <span class="drop-icon">▾</span>
+            <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
+        </a>
+            <input type="checkbox" id="sm3">
+            <ul class="sub-menu">
+                <li><a href="#">Java</a></li>
+                <li><a href="#">Rättade prov
+                    <span class="drop-icon">▾</span>
+                    <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
+                </a>
+                    <input type="checkbox" id="sm2">
+                    <ul class="sub-menu">
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">SQL</a></li>
+                        <li><a href="#">Node</a></li>
+                    </ul>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</header>
+</head>
+</br>
+<body>
+
+<div class="form">
+    <form class="prov-form">
+        <div id="skapa">
+
+            <label for="titel">Vad ska provet heta?</label>
+            <input type="text" placeholder="Vilken titel ska provet få?" id="titel"><button id="saveTitel" type="submit">Spara</button>
+        </div>
+        <div id="newQuestion">
+
+            <button type="button" id="add" onclick="myFunction()">Lägg till frågor</button>
+
+        </div>
+        <div id="q1">
+            <select id="getValue">
+                <option value="1">Envalsfråga</option>
+                <option value="2">Flervalsfråga</option>
+                <option value="3">Rangordning</option>
+            </select>
+            <label>Fråga 1</label>
+            <br>
+            <input type="text" placeholder="Skriv din fråga">
+
+            <hr>
+            <label>Svar</label>
+            <br>
+            <input type="text" placeholder="Svar 1">
+            <p style="float: left">Tidsgräns: </p>
+            <input type="number" id="time">
+            <hr>
+            <button type="submit" id="next" onclick="reset()">Nästa</button>
+        </div>
+        <div id="flerval">
+            <select id="getValue2">
+                <option value="1">Envalsfråga</option>
+                <option value="2">Flervalsfråga</option>
+                <option value="3">Rangordning</option>
+            </select>
+            <label>Fråga 1</label>
+            <br>
+            <input type="text" placeholder="Skriv din fråga">
+
+            <hr>
+            <label>Svar</label>
+            <br>
+            <input type="text" placeholder="Svar 1">
+            <br>
+            <input type="text" placeholder="Svar 2">
+            <br>
+            <input type="text" placeholder="Svar 3">
+            <p style="float: left">Tidsgräns: </p>
+            <input type="number" id="timeF">
+            <hr>
+            <button type="submit" id="next2" onclick="reset()">Nästa</button>
+        </div>
+        <div id="rang">
+            <select id="getValue3">
+                <option value="1">Envalsfråga</option>
+                <option value="2">Flervalsfråga</option>
+                <option value="3">Rangordning</option>
+            </select>
+            <label>Fråga 1</label>
+            <br>
+            <input type="text" placeholder="Skriv din fråga">
+            <hr>
+            <label>Svar</label>
+            <p style="float: left">Tidsgräns: </p>
+            <input type="number" id="timeR">
+            <hr>
+            <button type="submit" id="next3" onclick="reset()">Nästa</button>
+        </div>
+    </form>
+
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="login.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+</body>
+</html>
